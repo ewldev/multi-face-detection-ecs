@@ -7,8 +7,7 @@ const FaceRecognition = ({ imageUrl, boxes }) => {
       <div className='absolute mt2'>
         <img id='inputimage' alt='' src={imageUrl} width='500px' heigh='auto'/>
         {boxes.map(box =>
-          // eslint-disable-next-line
-          <div key={'box${box.topRow}${box.rightCol}'}
+          <div key={`box${box.topRow}${box.rightCol}`}
             className='bounding-box'
             style={{top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}}>
           </div>
