@@ -18,7 +18,10 @@ const particlesOptions = {
         enable: true,
         value_area: 800
       }
-    }
+    },
+    move: {
+      speed: 1.5
+    }  
   }
 }
 
@@ -79,7 +82,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('http://multi-LoadB-WONT94LVFUZ6-046346e9be8d70e3.elb.us-east-1.amazonaws.com:3000/imageurl', {
+      fetch('http://multi-LoadB-VZDG1W8QK0YI-6c717871e65a4c82.elb.us-east-1.amazonaws.com:3000/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -89,7 +92,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('http://multi-LoadB-WONT94LVFUZ6-046346e9be8d70e3.elb.us-east-1.amazonaws.com:3000/image', {
+          fetch('http://multi-LoadB-VZDG1W8QK0YI-6c717871e65a4c82.elb.us-east-1.amazonaws.com:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
