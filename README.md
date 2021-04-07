@@ -1,12 +1,14 @@
 # Multi-face detection ECS
 
+https://ewldev.github.io/multiface-detection/
+
 Front end of face detection app
 
 Built with React and integrated with a ranking function hosted on AWS Lambda
 
-Back end is running on docker hosted on AWS ECS
+Connected to backend hosted on Heroku
 
-https://www.docker.com/blog/docker-compose-from-local-to-amazon-ecs/
+https://github.com/ewldev/multi-face_detection_api
 
 
 1. Clone this repo
