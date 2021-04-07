@@ -23,7 +23,7 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('http://multi-LoadB-VZDG1W8QK0YI-6c717871e65a4c82.elb.us-east-1.amazonaws.com:3000/register', {
+    fetch('https://shrouded-lowlands-77858.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
